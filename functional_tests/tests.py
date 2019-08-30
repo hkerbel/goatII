@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 import time
 
-MAX_WAIT = 10		# Max seconds to wait for page to render.
+MAX_WAIT = 6.5		# Max seconds to wait for page to render.
 
 class NewVisitorTest(LiveServerTestCase):
 
