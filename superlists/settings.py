@@ -25,13 +25,13 @@ SECRET_KEY = 'kvl=grfy5hmu)=!q^+8e%f(d-ls&j3c4p!8gb_3jjr3c_5)_@9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']       # DANGER! '*' is 'allow everyone'. Temp hack (TDD Goat ch 9.7)
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    ###'django.contrib.admin', # As per Testing Goat chapter 8.8 [HJK: Sept 5 2019]
+    ###'django.contrib.admin', # As per Testing Goat chapter 8.8 [HJK: Sept 5 2019  ]
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
