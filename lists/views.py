@@ -33,5 +33,6 @@ def view_list(request, list_id):
         except ValidationError:
             error = "You can't have an empty list item"
 
+    print(">>>>> list_", list_)
     return render(request, 'list.html', {'list': list_ , 'error': error})
 
