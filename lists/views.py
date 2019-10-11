@@ -10,7 +10,7 @@ def home_page(request: HttpResponse):
     return render(request, 'home.html', {'form': ItemForm()})
 
 
-def new_list(request):
+def new_list(request: HttpResponse):
     form = ItemForm(data=request.POST)
     if form.is_valid():
         list_ = List.objects.create()
@@ -21,7 +21,7 @@ def new_list(request):
 
 
 
-def view_list(request, list_id):
+def view_list(request: HttpResponse, list_id: int):
     list_ = List.objects.get(id=list_id)
     form = ExistingListItemForm(for_list=list_)
     if request.method == 'POST':
